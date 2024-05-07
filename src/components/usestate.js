@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState} from 'react';
+//useState allows you to manage state within a functional component.
 
-const UseStateComponent = () => {
+const  UseStateComponent = () => {
+     const [count, setCount] = useState(0);
   return (
     <div className=' mt-10  text-green-500 bg-gray-500'>
-      <h1 className="text-3xl font-bold">Use State logic</h1>
-      <p>Welcome to our website!</p>
+        <p>Count: {count}</p>
+         <button onClick={() => setCount(count+1)}>Increment</button>
     </div>
   );
 }
 
 export default UseStateComponent;
+
+
